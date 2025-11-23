@@ -1,0 +1,149 @@
+.program-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 13rem;
+  scroll-margin-top: 8rem;
+}
+
+.program-list-div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2rem;
+  flex-wrap: wrap;
+  gap: 1.8rem;
+}
+
+.program-div {
+  width: 290px;
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: start;
+  overflow: hidden;
+  gap: 1.5rem;
+}
+
+.program-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  padding: 6px 17px 10px 17px;
+  border: 1px solid rgba(255, 237, 0, 1);
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 20px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.program-btn:hover {
+  background-color: rgba(255, 237, 0, 0.9);
+  color: #000;
+}
+
+.program-img-div {
+  width: 100%;
+  height: 494px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.program-img-bg {
+  width: 100%;
+  height: 500px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+}
+
+.program-img1,
+.program-img2,
+.program-img3,
+.program-img4,
+.program-img5 {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 20px;
+  overflow: hidden;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.program-span {
+  width: 100%;
+  max-width: 180px;
+  color: #fff;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  font-weight: 600;
+  font-size: 23px;
+  opacity: 1;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.program-title {
+  width: 100%;
+  position: relative;
+  font-weight: 600;
+  font-size: 36px;
+  opacity: 1;
+  color: rgba(255, 237, 0, 1);
+  text-align: start;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1000px) {
+  .program-div {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .program-wrapper {
+    margin-bottom: 5rem;
+  }
+
+  .program-span {
+    font-size: 20px;
+  }
+
+  .program-title {
+    font-size: 30px;
+  }
+
+  .program-div {
+    width: 100%;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .program-span {
+    font-size: 18px;
+    width: 160px;
+  }
+
+  .program-title {
+    font-size: 24px;
+    text-align: center;
+  }
+}

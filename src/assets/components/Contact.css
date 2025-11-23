@@ -1,0 +1,121 @@
+.contact-section {
+  margin-bottom: 13rem;
+  padding: 60px 20px 0 20px;
+  scroll-margin-top: 5rem;
+}
+
+.contact-header {
+  margin-bottom: 2rem;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: left;
+}
+
+.contact-title {
+  color: #ffed00;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.contact-form {
+  flex: 1 1 550px;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+  padding: 0 50px 0 0;
+  gap: 35px;
+}
+
+.input-label {
+  display: none;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px 20px;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  background-color: transparent;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+  resize: none;
+}
+
+.contact-form textarea {
+  font-family: Helvetica, sans-serif;
+  border-radius: 30px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #ffed00;
+}
+
+.submit-btn {
+  width: auto;
+  color: #000;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin: 0 auto;
+  margin-top: 20px;
+  background-color: #ffed00;
+  border-radius: 50px;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: transform 0.3s ease;
+}
+
+.submit-btn:hover {
+  transform: translateY(-3px);
+}
+
+.contact-image {
+  flex: 1 1 500px;
+  min-width: 300px;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.contact-image img {
+  width: 100%;
+  display: block;
+  border-radius: 30px;
+}
+
+@media (max-width: 900px) {
+  .contact-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-form,
+  .contact-image {
+    width: 100%;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .contact-title {
+    font-size: 1.5rem;
+  }
+}
