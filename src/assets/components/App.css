@@ -31,6 +31,7 @@ body {
 a {
   color: #fff;
   text-decoration: inherit;
+  outline: none
 }
 
 h1 {

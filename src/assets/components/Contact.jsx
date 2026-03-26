@@ -42,7 +42,7 @@ const Contact = () => {
             required
           ></textarea>
 
-          <button type="submit" className="submit-btn">
+          <button type="submit" className="gold-btn">
             Enviar
           </button>
         </form>

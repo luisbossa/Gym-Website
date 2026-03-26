@@ -55,7 +55,16 @@
   font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 0.8rem;
-  color: #f1da09;
+  background: linear-gradient(
+    135deg,
+    #fff1a8 0%,
+    #f5d77a 25%,
+    #d4af37 50%,
+    #cfae2e 75%,
+    #fff6c2 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-transform: uppercase;
 }
 

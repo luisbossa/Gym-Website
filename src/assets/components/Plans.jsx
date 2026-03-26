@@ -94,7 +94,7 @@ const Plans = () => {
             </div>
 
             <div className="button-container">
-              <button className="plans-btn" type="button">
+              <button className="gold-btn" type="button">
                 Comprar ahora
               </button>
             </div>

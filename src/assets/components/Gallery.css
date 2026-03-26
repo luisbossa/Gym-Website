@@ -5,12 +5,23 @@
 }
 
 .gallery-title {
-  width: auto;
-  color: rgba(255, 237, 0, 1);
-  font-weight: 600;
+  width: fit-content;
+  position: relative;
+  font-weight: 700;
   font-size: 28px;
-  text-align: start;
   text-transform: uppercase;
+  text-align: start;
+  background: linear-gradient(
+    135deg,
+    #fff1a8 0%,
+    #f5d77a 25%,
+    #d4af37 50%,
+    #cfae2e 75%,
+    #fff6c2 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
 }
 
 .main-grid {

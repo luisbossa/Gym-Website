@@ -11,7 +11,8 @@ const Hero = () => {
 
       <div className="hero-video">
         <div className="hero-video-div">
-          <a href="#plans" className="hero-button">
+
+          <a className="gold-btn">
             Comienza Ahora
           </a>
         </div>

@@ -34,8 +34,6 @@
   justify-content: center;
   padding: 0 1rem 15px 1rem;
   background-color: #000;
-  border-top-left-radius: 17px;
-  border-top-right-radius: 17px;
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
   z-index: 5;
@@ -61,22 +59,93 @@
   opacity: 0.9;
 }
 
-.hero-button {
-  width: auto;
+.gold-btn {
+  position: relative;
+  overflow: hidden;
+
+  width: fit-content;
+  display: flex;
   padding: 6px 17px 10px 17px;
+  cursor: pointer;
+  gap: 0.4rem;
+
   font-weight: 700;
   font-size: 1.25rem;
-  color: #000;
-  background-color: #ffed00;
   border-radius: 40px;
-  text-align: center;
-  cursor: pointer;
   text-transform: uppercase;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+
+  color: #161616;
+
+  background: linear-gradient(
+    135deg,
+    #f5d77a 0%,
+    #e6c35c 20%,
+    #d4af37 40%,
+    #f1d97a 60%,
+    #cfae2e 80%,
+    #fff1a8 100%
+  );
+
+  border: none;
+
+  box-shadow:
+    inset 0 2px 4px rgba(255,255,255,0.4),
+    inset 0 -2px 4px rgba(0,0,0,0.2),
+    0 10px 20px rgba(0,0,0,0.25);
+
+  transition: all 0.3s ease;
 }
 
-.hero-button:hover {
-  transform: translateY(-3px);
+/* REFLEJO (clave del realismo) */
+.gold-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+
+  transform: skewX(-25deg);
+}
+
+/* HOVER */
+.gold-btn:hover {
+  background: linear-gradient(
+    135deg,
+    #fff1a8 0%,
+    #f5d77a 25%,
+    #d4af37 50%,
+    #f5d77a 75%,
+    #fff6c2 100%
+  );
+
+  transform: translateY(-2px) scale(1.02);
+
+  box-shadow:
+    inset 0 2px 6px rgba(255,255,255,0.6),
+    inset 0 -2px 6px rgba(0,0,0,0.25),
+    0 15px 25px rgba(0,0,0,0.3);
+}
+
+/* ANIMACIÓN DEL BRILLO */
+.gold-btn:hover::before {
+  animation: shine 0.9s ease forwards;
+}
+
+@keyframes shine {
+  0% {
+    left: -75%;
+  }
+  100% {
+    left: 125%;
+  }
 }
 
 .hero-video {
@@ -109,7 +178,7 @@
     text-align: center;
   }
 
-  .hero-button {
+  .gold-btn {
     margin: 0 auto;
   }
 }

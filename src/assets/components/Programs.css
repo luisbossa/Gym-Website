@@ -38,16 +38,26 @@
   justify-content: center;
   text-transform: uppercase;
   padding: 6px 17px 10px 17px;
-  border: 1px solid rgba(255, 237, 0, 1);
+  border: 1px solid #d4af37;
   border-radius: 50px;
   font-weight: 600;
   font-size: 20px;
-  transition: background 0.3s ease, color 0.3s ease;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
 }
 
 .program-btn:hover {
-  background-color: rgba(255, 237, 0, 0.9);
-  color: #000;
+  background: linear-gradient(
+    135deg,
+    #fff1a8 0%,
+    #f5d77a 25%,
+    #d4af37 50%,
+    #cfae2e 75%,
+    #fff6c2 100%
+  );
+  border: 1px solid #161616;
+  color: #161616;
 }
 
 .program-img-div {
@@ -103,12 +113,21 @@
 .program-title {
   width: 100%;
   position: relative;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 36px;
-  opacity: 1;
-  color: rgba(255, 237, 0, 1);
-  text-align: start;
   text-transform: uppercase;
+  text-align: start;
+  background: linear-gradient(
+    135deg,
+    #fff1a8 0%,
+    #f5d77a 25%,
+    #d4af37 50%,
+    #cfae2e 75%,
+    #fff6c2 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
 }
 
 @media (max-width: 1000px) {
