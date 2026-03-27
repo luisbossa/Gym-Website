@@ -14,7 +14,7 @@ const Programs = () => {
             <div className="program-img-bg"></div>
             <img
               className="program-img1"
-              src="/images/trainer-1.jpeg"
+              src="/images/trainer-1.png"
               alt="Programa 1"
             />
           </div>
@@ -29,7 +29,7 @@ const Programs = () => {
             <div className="program-img-bg"></div>
             <img
               className="program-img2"
-              src="/images/trainer-2.jpeg"
+              src="/images/trainer-2.png"
               alt="Programa 2"
             />
           </div>
@@ -44,7 +44,7 @@ const Programs = () => {
             <div className="program-img-bg"></div>
             <img
               className="program-img3"
-              src="/images/trainer-3.jpeg"
+              src="/images/trainer-3.png"
               alt="Programa 3"
             />
           </div>
@@ -59,7 +59,7 @@ const Programs = () => {
             <div className="program-img-bg"></div>
             <img
               className="program-img4"
-              src="/images/trainer-4.jpeg"
+              src="/images/trainer-4.png"
               alt="Programa 4"
             />
           </div>
@@ -74,7 +74,7 @@ const Programs = () => {
             <div className="program-img-bg"></div>
             <img
               className="program-img5"
-              src="/images/trainer-5.jpeg"
+              src="/images/trainer-5.png"
               alt="Programa 5"
             />
           </div>
