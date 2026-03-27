@@ -2,7 +2,7 @@
   width: 100%;
   min-height: 100vh;
   color: white;
-  padding: 8rem 10rem 20px 10rem;
+  padding: 8rem clamp(1rem, 6vw, 10rem) 20px clamp(1rem, 6vw, 10rem);
 }
 
 .program-hero {
