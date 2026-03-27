@@ -1,0 +1,231 @@
+.program-page {
+  width: 100%;
+  max-width: 1400px;
+  min-height: 100vh;
+  color: white;
+  padding: 8rem 0 3rem;
+}
+
+.program-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.program-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 35px;
+  filter: brightness(0.65);
+}
+
+.program-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    #000 0%,
+    rgba(0, 0, 0, 0.7) 50%,
+    transparent 100%
+  );
+}
+
+.program-hero-content {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.program-hero h1 {
+  font-size: 52px;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.program-hero p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* CONTENEDOR */
+.program-detail-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.program-info {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.info-card {
+  background: #111;
+  padding: 1.4rem;
+  border-radius: 12px;
+  text-align: center;
+  min-width: 140px;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.info-card span {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.info-card h3 {
+  margin-top: 6px;
+  color: #d4af37;
+  font-size: 18px;
+}
+
+.program-description,
+.program-benefits,
+.program-exercises,
+.program-tips {
+  width: 100%;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.program-description p {
+  margin: 0 auto;
+  max-width: 600px;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
+}
+
+.program-description h2,
+.program-benefits h2,
+.program-exercises h2,
+.program-tips h2 {
+  font-size: 26px;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.benefits-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.benefit-card {
+  background: #111;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  border: 1px solid #d4af37;
+  font-size: 14px;
+}
+
+.exercise-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.exercise-card {
+  background: #111;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  text-align: center;
+}
+
+.exercise-card h4 {
+  font-size: 15px;
+}
+
+.exercise-card span {
+  display: block;
+  margin-top: 4px;
+  color: #d4af37;
+  font-size: 13px;
+}
+
+/* TIPS */
+.program-tips ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.program-tips li {
+  width: fit-content;
+  text-align: center;
+  position: relative;
+  padding-left: 1.2rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.program-tips li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #d4af37;
+}
+
+.program-detail-div {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .program-hero {
+    height: 50vh;
+  }
+
+  .program-hero h1 {
+    font-size: 30px;
+  }
+
+  .program-detail-container {
+    padding: 2rem 1rem;
+  }
+
+  .program-description h2,
+  .program-benefits h2,
+  .program-exercises h2,
+  .program-tips h2 {
+    font-size: 22px;
+  }
+
+  .exercise-list {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .program-hero h1 {
+    font-size: 24px;
+  }
+
+  .program-hero p {
+    font-size: 14px;
+  }
+
+  .info-card {
+    min-width: 120px;
+    padding: 1rem;
+  }
+}

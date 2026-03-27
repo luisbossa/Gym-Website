@@ -67,6 +67,7 @@
   align-items: center;
   justify-content: space-between;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .program-img-bg {
