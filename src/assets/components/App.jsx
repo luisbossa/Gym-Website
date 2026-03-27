@@ -27,19 +27,17 @@ const Home = () => {
 
 const App = () => {
   return (
-    <>
+    <BrowserRouter>
       <div className="noise"></div>
       <Navbar />
 
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/program/:id" element={<ProgramDetail />} />
-        </Routes>
-      </BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/program/:id" element={<ProgramDetail />} />
+      </Routes>
 
       <Footer />
-    </>
+    </BrowserRouter>
   );
 };
 

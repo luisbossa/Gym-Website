@@ -1,5 +1,4 @@
 import "./Programs.css";
-import "./Programs.css";
 import { useNavigate } from "react-router-dom";
 
 const programs = [

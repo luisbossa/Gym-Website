@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { HashLink } from "react-router-hash-link";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -24,37 +25,73 @@ const Navbar = () => {
       <div className="navbar-wrapper">
         <div className="noise"></div>
 
-        <a href="/">
+        {/* LOGO */}
+        <HashLink smooth to="/#home">
           <img
             src="/images/logo.png"
             className="navbar-logo"
             width="120"
             alt="Logo"
           />
-        </a>
+        </HashLink>
 
         <nav className={`nav-links ${isOpen ? "active" : ""}`}>
-          <a href="#home" className="nav-link home" onClick={closeMenu}>
+          <HashLink
+            smooth
+            to="/#home"
+            className="nav-link home"
+            onClick={closeMenu}
+          >
             Inicio
-          </a>
-          <a href="#training" className="nav-link workouts" onClick={closeMenu}>
+          </HashLink>
+
+          <HashLink
+            smooth
+            to="/#training"
+            className="nav-link workouts"
+            onClick={closeMenu}
+          >
             Entrenamientos
-          </a>
-          <a href="#products" className="nav-link store" onClick={closeMenu}>
+          </HashLink>
+
+          <HashLink
+            smooth
+            to="/#products"
+            className="nav-link store"
+            onClick={closeMenu}
+          >
             Productos
-          </a>
-          <a href="#gallery" className="nav-link about" onClick={closeMenu}>
+          </HashLink>
+
+          <HashLink
+            smooth
+            to="/#gallery"
+            className="nav-link about"
+            onClick={closeMenu}
+          >
             Galería
-          </a>
-          <a href="#plans" className="nav-link recipes" onClick={closeMenu}>
+          </HashLink>
+
+          <HashLink
+            smooth
+            to="/#plans"
+            className="nav-link recipes"
+            onClick={closeMenu}
+          >
             Planes
-          </a>
-          <a href="#contact" className="nav-link contact" onClick={closeMenu}>
+          </HashLink>
+
+          <HashLink
+            smooth
+            to="/#contact"
+            className="nav-link contact"
+            onClick={closeMenu}
+          >
             Contacto
-          </a>
+          </HashLink>
         </nav>
 
-        <a className="signup-btn">Iniciar sesión</a>
+        <button className="signup-btn">Iniciar sesión</button>
 
         <button
           className="menu-toggle"

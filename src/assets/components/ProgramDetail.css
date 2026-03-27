@@ -1,9 +1,8 @@
 .program-page {
   width: 100%;
-  max-width: 1400px;
   min-height: 100vh;
   color: white;
-  padding: 8rem 0 3rem;
+  padding: 8rem 10rem 20px 10rem;
 }
 
 .program-hero {
@@ -60,14 +59,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 2rem;
 }
 
 .program-info {
   width: 100%;
   display: flex;
-  gap: 1rem;
   justify-content: center;
   flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .info-card {
@@ -80,7 +80,7 @@
 }
 
 .info-card span {
-  font-size: 13px;
+  font-size: 15px;
   color: rgba(255, 255, 255, 0.5);
 }
 
@@ -102,6 +102,7 @@
 .program-description p {
   margin: 0 auto;
   max-width: 600px;
+  font-size: 1rem;
   color: rgba(255, 255, 255, 0.75);
   line-height: 1.6;
 }
@@ -111,8 +112,8 @@
 .program-exercises h2,
 .program-tips h2 {
   font-size: 26px;
-  margin-bottom: 1rem;
   letter-spacing: 1px;
+  margin-bottom: 2rem;
 }
 
 .benefits-list {
@@ -131,11 +132,12 @@
 }
 
 .exercise-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 1rem;
   width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 200px));
+  justify-content: center;
   margin-top: 1rem;
+  gap: 1rem;
 }
 
 .exercise-card {
@@ -147,22 +149,22 @@
 }
 
 .exercise-card h4 {
-  font-size: 15px;
+  font-size: 1rem;
 }
 
 .exercise-card span {
   display: block;
   margin-top: 4px;
   color: #d4af37;
-  font-size: 13px;
+  font-size: 1rem;
 }
 
 /* TIPS */
 .program-tips ul {
-  list-style: none;
+  width: fit-content;
   padding: 0;
+  list-style: none;
   margin: 0 auto;
-  max-width: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -170,8 +172,9 @@
 }
 
 .program-tips li {
-  width: fit-content;
-  text-align: center;
+  width: 100%;
+  font-size: 15px;
+  text-align: left;
   position: relative;
   padding-left: 1.2rem;
   color: rgba(255, 255, 255, 0.75);

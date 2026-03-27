@@ -47,12 +47,18 @@
 }
 
 .signup-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   color: #fff;
   font-size: 1.1rem;
   font-weight: 500;
   text-decoration: none;
-  transition: color 0.3s ease;
+  background: transparent;
+  border: none;
+  outline: none;
   cursor: pointer;
+  transition: color 0.3s ease;
 }
 
 .signup-btn:hover {
@@ -96,7 +102,9 @@
     justify-content: center;
     background-color: #000000;
     transform: translateY(-100%);
-    transition: transform 0.4s ease-in-out, height 0.4s ease-in-out;
+    transition:
+      transform 0.4s ease-in-out,
+      height 0.4s ease-in-out;
     overflow: hidden;
     z-index: -1;
     opacity: 1;
@@ -104,7 +112,7 @@
   }
 
   .nav-links.active {
-    height: calc(52vh - 70px);
+    height: calc(52vh - 190px);
     transform: translateY(0);
     border-bottom: 1px solid #fff;
   }

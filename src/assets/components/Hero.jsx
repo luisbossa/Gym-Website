@@ -3,6 +3,8 @@ import "./Hero.css";
 const Hero = () => {
   return (
     <section id="hero" className="hero-wrapper">
+      <div className="hero-overlay"></div>
+
       <div className="hero-content">
         <div className="hero-text">
           <h1 className="hero-title">Alcanza Tu Mejor Versión</h1>
@@ -11,10 +13,7 @@ const Hero = () => {
 
       <div className="hero-video">
         <div className="hero-video-div">
-
-          <a className="gold-btn">
-            Comienza Ahora
-          </a>
+          <a className="gold-btn">Comienza Ahora</a>
         </div>
 
         <video

@@ -1,5 +1,6 @@
 .hero-wrapper {
   width: 100%;
+  position: relative;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -8,6 +9,23 @@
   padding: 1.5rem 1rem;
   margin-bottom: 13rem;
   background-color: #000;
+}
+
+.hero-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  z-index: 2;
+  pointer-events: none;
+
+  background: linear-gradient(
+    to top,
+    #000 0%,
+    rgba(0, 0, 0, 0.7) 50%,
+    transparent 100%
+  );
 }
 
 .hero-content {
