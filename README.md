@@ -1,16 +1,186 @@
-# React + Vite
+# Body Control San Ramón
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web moderna para un gimnasio ubicado en San Ramón, Costa Rica.
+Diseñada para ofrecer una experiencia visual atractiva, navegación fluida y acceso a programas de entrenamiento, planes y contenido fitness.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tecnologías utilizadas
 
-## React Compiler
+- React.js
+- React Router DOM
+- CSS3
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Características principales
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Programas de entrenamiento
+
+- Navegación dinámica entre programas (`/program/:id`)
+- Vista detallada con:
+  - Nivel
+  - Duración
+  - Beneficios
+  - Ejercicios
+  - Tips
+
+- UI estilo "videojuego selection" (hover effects)
+
+---
+
+### Planes de membresía
+
+- Planes:
+  - Inicial
+  - Intermedio
+  - Avanzado
+  - Elite
+
+- Tarjetas interactivas con beneficios
+- Integración con pantalla de checkout
+- Flujo:
+
+  ```
+  Planes → Checkout → Pago
+  ```
+
+---
+
+### Hero Section
+
+- Video de fondo fullscreen
+- Overlay degradado para efecto cinematográfico
+- Botón con efecto gold premium (shine animation)
+
+---
+
+### Navegación avanzada
+
+- React Router implementado
+- Navegación SPA sin recargas
+- Scroll a secciones con hash links:
+  - `/#training`
+  - `/#plans`
+
+- Navbar responsive con menú móvil
+
+---
+
+## Estructura del proyecto
+
+```
+src/
+│
+├── App.jsx
+├── main.jsx
+│
+├── components/
+│   ├── Navbar.jsx
+│   ├── Hero.jsx
+│   ├── Programs.jsx
+│   ├── ProgramDetail.jsx
+│   ├── Plans.jsx
+│   ├── Checkout.jsx
+│   ├── Products.jsx
+│   ├── Gallery.jsx
+│   ├── Contact.jsx
+│   └── Footer.jsx
+│
+├── styles/
+│   ├── App.css
+│   ├── Hero.css
+│   ├── Programs.css
+│   ├── ProgramDetail.css
+│   ├── Plans.css
+│   └── Checkout.css
+│
+└── assets/
+    ├── images/
+    ├── videos/
+    └── fonts/
+```
+
+---
+
+## Instalación y uso
+
+```bash
+# Clonar repositorio
+git clone https://github.com/luisbossa/Gym-Website
+
+# Entrar al proyecto
+cd Gym-Website
+
+# Instalar dependencias
+npm install
+
+# Ejecutar en desarrollo
+npm run dev
+```
+
+---
+
+## Rutas principales
+
+| Ruta              | Descripción         |
+| ----------------- | ------------------- |
+| `/`               | Página principal    |
+| `/program/:id`    | Detalle de programa |
+| `/checkout/:plan` | Pago de plan        |
+
+---
+
+## Responsive Design
+
+- Mobile
+- Tablet
+- Desktop
+
+Uso de:
+
+- `clamp()`
+- `flexbox`
+- `grid`
+
+---
+
+## Funcionalidades destacadas
+
+- Navegación sin recarga (SPA)
+- Scroll inteligente entre secciones
+- Separación de layouts (Home vs ProgramDetail)
+- Hover interactivo tipo gaming UI
+
+---
+
+## Mejoras futuras
+
+- Integración con pasarela de pago (Stripe / PayPal)
+- Autenticación de usuarios
+- Dashboard de progreso
+- Backend con Node.js / Express
+- Base de datos (MongoDB)
+
+---
+
+## Sobre el proyecto
+
+Este proyecto fue desarrollado como una experiencia digital para representar un gimnasio moderno en Costa Rica, enfocado en:
+
+- Motivación visual
+- Experiencia de usuario fluida
+- Branding fuerte (negro + dorado)
+- Escalabilidad futura
+
+---
+
+## Autor
+
+Desarrollado por **Bstudio**
+
+---
+
+## Licencia
+
+Este proyecto es de uso educativo y personal.
