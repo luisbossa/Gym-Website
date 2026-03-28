@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import "./Plans.css";
 
 const planes = [
@@ -43,7 +44,6 @@ const planes = [
   },
 ];
 
-// SVG como componente JSX
 const CheckIcon = () => (
   <svg
     aria-hidden="true"
@@ -62,6 +62,8 @@ const CheckIcon = () => (
 );
 
 const Plans = () => {
+  const navigate = useNavigate();
+
   return (
     <section id="plans" className="plans-section">
       <div className="plans-header">
@@ -80,21 +82,22 @@ const Plans = () => {
               </div>
             </div>
 
-            <div>
-              <ul className="lists">
-                {plan.beneficios.map((b, i) => (
-                  <li key={i} className="list">
-                    <span>
-                      <CheckIcon />
-                    </span>
-                    <p>{b}</p>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <ul className="lists">
+              {plan.beneficios.map((b, i) => (
+                <li key={i} className="list">
+                  <span>
+                    <CheckIcon />
+                  </span>
+                  <p>{b}</p>
+                </li>
+              ))}
+            </ul>
 
             <div className="button-container">
-              <button className="gold-btn" type="button">
+              <button
+                className="gold-btn"
+                onClick={() => navigate(`/checkout/${index + 1}`)}
+              >
                 Comprar ahora
               </button>
             </div>

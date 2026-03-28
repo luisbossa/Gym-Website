@@ -112,7 +112,7 @@
   }
 
   .nav-links.active {
-    height: calc(52vh - 190px);
+    height: calc(35vh - 70px);
     transform: translateY(0);
     border-bottom: 1px solid #fff;
   }

@@ -80,20 +80,15 @@
 .gold-btn {
   position: relative;
   overflow: hidden;
-
   width: fit-content;
   display: flex;
-  padding: 6px 17px 10px 17px;
+  padding: 8px 17px 10px 17px;
   cursor: pointer;
-  gap: 0.4rem;
-
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   border-radius: 40px;
   text-transform: uppercase;
-
   color: #161616;
-
   background: linear-gradient(
     135deg,
     #f5d77a 0%,
@@ -102,16 +97,14 @@
     #f1d97a 60%,
     #cfae2e 80%,
     #fff1a8 100%
-  );
-
-  border: none;
-
-  box-shadow:
+    );
+    border: none;
+    box-shadow:
     inset 0 2px 4px rgba(255,255,255,0.4),
     inset 0 -2px 4px rgba(0,0,0,0.2),
     0 10px 20px rgba(0,0,0,0.25);
-
-  transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    gap: 0.4rem;
 }
 
 /* REFLEJO (clave del realismo) */

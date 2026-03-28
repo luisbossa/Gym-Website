@@ -9,6 +9,7 @@ import Plans from "./Plans";
 import Contact from "./Contact";
 import Footer from "./Footer";
 import ProgramDetail from "./ProgramDetail";
+import Checkout from "./Checkout";
 
 import "./App.css";
 
@@ -34,6 +35,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/program/:id" element={<ProgramDetail />} />
+        <Route path="/checkout/:planId" element={<Checkout />} />
       </Routes>
 
       <Footer />

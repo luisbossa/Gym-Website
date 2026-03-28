@@ -1,3 +1,4 @@
+import { HashLink } from "react-router-hash-link";
 import "./Hero.css";
 
 const Hero = () => {
@@ -13,7 +14,9 @@ const Hero = () => {
 
       <div className="hero-video">
         <div className="hero-video-div">
-          <a className="gold-btn">Comienza Ahora</a>
+          <HashLink className="gold-btn" smooth to="/#plans">
+            Comienza Ahora
+          </HashLink>
         </div>
 
         <video

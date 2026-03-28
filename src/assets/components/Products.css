@@ -32,16 +32,7 @@
 }
 
 .merch-btn:hover {
-  background: linear-gradient(
-    135deg,
-    #fff1a8 0%,
-    #f5d77a 25%,
-    #d4af37 50%,
-    #cfae2e 75%,
-    #fff6c2 100%
-  );
-  border: 1px solid #161616;
-  color: #161616;
+  background: #111;
 }
 
 .merch-title {
@@ -100,7 +91,8 @@
   align-items: center;
   text-align: left;
   border-radius: 20px;
-  border: 1px solid #fff;
+  background: #111;
+  border: 1px solid rgba(212, 175, 55, 0.25);
 }
 
 .merch-info-div {

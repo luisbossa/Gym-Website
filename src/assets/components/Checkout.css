@@ -1,0 +1,131 @@
+.checkout-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: clamp(5rem, 8vw, 8rem) clamp(1rem, 6vw, 10rem);
+}
+
+.checkout-container {
+  width: 100%;
+  max-width: 520px;
+  position: relative;
+}
+
+.checkout-back {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: -50px;
+  left: 0;
+  background: #111;
+  cursor: pointer;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.checkout-back svg {
+  width: 24px;
+  height: 24px;
+}
+
+.checkout-card {
+  width: 100%;
+  background: #111;
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.checkout-title {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.checkout-plan {
+  text-align: center;
+}
+
+.checkout-plan h2 {
+  font-size: 1.3rem;
+}
+
+.checkout-plan p {
+  font-size: 1.1rem;
+  color: #d4af37;
+  margin-top: 5px;
+}
+
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.checkout-group {
+  width: 100%;
+  position: relative;
+}
+
+.checkout-group input {
+  width: 100%;
+  padding: 14px 12px;
+  background: #000;
+  border: 1px solid #333;
+  border-radius: 10px;
+  color: #fff;
+  outline: none;
+}
+
+.checkout-group label {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  font-size: 0.85rem;
+  color: #777;
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+
+.checkout-group input:focus + label,
+.checkout-group input:valid + label {
+  top: -8px;
+  font-size: 0.7rem;
+  color: #d4af37;
+}
+
+.checkout-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.checkout-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.8rem;
+}
+
+@media (max-width: 480px) {
+  .checkout-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .checkout-row {
+    flex-direction: column;
+  }
+
+  .checkout-back {
+    top: -40px;
+  }
+}

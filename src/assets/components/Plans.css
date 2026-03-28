@@ -59,7 +59,8 @@
   padding: 1.5rem 1.8rem;
   color: #fff;
   border-radius: 20px;
-  border: 1px solid #fff;
+  background: #111;
+  border: 1px solid rgba(212, 175, 55, 0.25);
 }
 
 .header {
