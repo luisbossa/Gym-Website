@@ -1,0 +1,48 @@
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 400;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  overflow-y: auto;
+  background: rgba(0, 0, 0, 0.78);
+  backdrop-filter: blur(6px);
+  animation: fade-in 0.2s ease;
+}
+
+.modal {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  padding: clamp(1.75rem, 5vw, 2.5rem);
+  border-radius: var(--radius-lg);
+  background: var(--gold-glow), var(--color-surface);
+  border: var(--border-gold-soft);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+  animation: reveal-up 0.35s var(--ease-out);
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--color-muted);
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.modal-close:hover {
+  color: var(--color-text);
+  border-color: var(--color-gold);
+}
+

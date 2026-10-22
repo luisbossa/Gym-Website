@@ -1,6 +1,9 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import App from "./assets/components/App";
+
+// Los estilos globales van primero para que los de cada componente puedan sobrescribirlos
+import "./styles/global.css";
+import App from "./App";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

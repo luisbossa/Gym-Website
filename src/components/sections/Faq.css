@@ -1,0 +1,193 @@
+.faq {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  align-items: start;
+  gap: 3rem 5rem;
+}
+
+.faq-intro {
+  position: sticky;
+  top: calc(var(--nav-height) + 2rem);
+}
+
+.faq-contact {
+  margin-top: 2rem;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* ---------- Item ---------- */
+
+.faq-item {
+  position: relative;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  overflow: hidden;
+  transition:
+    border-color 0.4s ease,
+    background 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+/* Barra dorada lateral que crece al abrir */
+.faq-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 3px;
+  background: var(--gold-text-gradient);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.5s var(--ease-out);
+}
+
+.faq-item:hover {
+  border-color: rgba(212, 175, 55, 0.25);
+}
+
+.faq-item.is-open {
+  border-color: rgba(212, 175, 55, 0.45);
+  background:
+    radial-gradient(circle at 0% 0%, rgba(212, 175, 55, 0.1), transparent 60%),
+    var(--color-surface);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+}
+
+.faq-item.is-open::before {
+  transform: scaleY(1);
+}
+
+/* ---------- Pregunta ---------- */
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem 1.4rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.faq-number {
+  flex-shrink: 0;
+  min-width: 1.6rem;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.3);
+  transition: color 0.3s ease;
+}
+
+.faq-question-text {
+  flex: 1;
+  transition: color 0.3s ease;
+}
+
+.faq-question:hover .faq-question-text,
+.faq-item.is-open .faq-question-text {
+  color: var(--color-gold-light);
+}
+
+.faq-item.is-open .faq-number,
+.faq-question:hover .faq-number {
+  color: var(--color-gold);
+}
+
+.faq-icon {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  color: var(--color-gold);
+  border: var(--border-gold-soft);
+  transition:
+    transform 0.45s var(--ease-out),
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.faq-question:hover .faq-icon {
+  border-color: var(--color-gold);
+}
+
+.faq-item.is-open .faq-icon {
+  transform: rotate(135deg);
+  color: #161616;
+  background: var(--color-gold);
+  border-color: var(--color-gold);
+}
+
+/* ---------- Respuesta: se despliega animando la fila del grid de 0fr a 1fr ---------- */
+
+.faq-answer {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.5s var(--ease-out);
+}
+
+.faq-item.is-open .faq-answer {
+  grid-template-rows: 1fr;
+}
+
+.faq-answer-inner {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.faq-answer p {
+  padding: 0 1.4rem 1.35rem calc(1.4rem + 1.6rem + 1rem);
+  color: var(--color-muted);
+  opacity: 0;
+  transform: translateY(-10px);
+  transition:
+    opacity 0.25s ease,
+    transform 0.35s var(--ease-out);
+}
+
+.faq-item.is-open .faq-answer p {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 0.4s ease 0.15s,
+    transform 0.5s var(--ease-out) 0.15s;
+}
+
+@media (max-width: 900px) {
+  .faq {
+    grid-template-columns: 1fr;
+  }
+
+  .faq-intro {
+    position: static;
+  }
+}
+
+@media (max-width: 480px) {
+  .faq-question {
+    gap: 0.75rem;
+    padding: 1.1rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .faq-number {
+    display: none;
+  }
+
+  .faq-answer p {
+    padding: 0 1rem 1.2rem;
+  }
+}

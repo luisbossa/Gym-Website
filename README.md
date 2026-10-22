@@ -70,36 +70,36 @@ Diseñada para ofrecer una experiencia visual atractiva, navegación fluida y ac
 ## Estructura del proyecto
 
 ```
+public/
+├── fonts/          # Fuente MinionPro
+├── images/         # Imágenes (WebP para fotos pesadas)
+└── videos/         # Video del hero
+
 src/
+├── main.jsx        # Punto de entrada (importa estilos globales)
+├── App.jsx         # Router y layout general
 │
-├── App.jsx
-├── main.jsx
+├── pages/          # Vistas asociadas a una ruta
+│   ├── Home.jsx
+│   ├── ProgramDetail.jsx / .css
+│   └── Checkout.jsx / .css
 │
 ├── components/
-│   ├── Navbar.jsx
-│   ├── Hero.jsx
-│   ├── Programs.jsx
-│   ├── ProgramDetail.jsx
-│   ├── Plans.jsx
-│   ├── Checkout.jsx
-│   ├── Products.jsx
-│   ├── Gallery.jsx
-│   ├── Contact.jsx
-│   └── Footer.jsx
+│   ├── layout/     # Navbar, Footer, ScrollToTop
+│   ├── sections/   # Secciones de la página principal
+│   │   ├── Hero, Features, Programs, Plans, Products
+│   │   └── Gallery, CallToAction, Faq, Contact
+│   └── ui/         # Icon, Reveal (animación al hacer scroll), SectionHeader
 │
-├── styles/
-│   ├── App.css
-│   ├── Hero.css
-│   ├── Programs.css
-│   ├── ProgramDetail.css
-│   ├── Plans.css
-│   └── Checkout.css
-│
-└── assets/
-    ├── images/
-    ├── videos/
-    └── fonts/
+├── context/        # Proveedores globales: sesión (Auth), carrito (Cart) y avisos (Toast)
+├── hooks/          # useAuth, useCart, useToast
+├── data/           # Contenido: negocio, planes, programas, productos, galería, FAQ, menú
+├── utils/          # Helpers (formato de precios)
+└── styles/
+    └── global.css  # Reset, variables y utilidades (.gold-btn, .gold-text, ...)
 ```
+
+Para cambiar precios, planes, programas o productos basta con editar los archivos de `src/data/`; los componentes se generan a partir de esos datos.
 
 ---
 
@@ -127,7 +127,13 @@ npm run dev
 | ----------------- | ------------------- |
 | `/`               | Página principal    |
 | `/program/:id`    | Detalle de programa |
-| `/checkout/:plan` | Pago de plan        |
+| `/checkout/:planId` | Pago de plan      |
+| `/cuenta`         | Mi cuenta (membresía, programas, compras) |
+| `*`               | Página 404          |
+
+> **Modo demostración:** no hay backend. Las cuentas, el carrito, las membresías y el
+> progreso se guardan en el `localStorage` del navegador y los pagos no generan cargos.
+> Tarjeta de prueba: `4242 4242 4242 4242`, cualquier fecha futura y CVV de 3 dígitos.
 
 ---
 

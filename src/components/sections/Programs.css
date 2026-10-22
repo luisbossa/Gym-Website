@@ -1,0 +1,132 @@
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.25rem;
+}
+
+.program-card {
+  position: relative;
+  aspect-ratio: 3 / 4.6;
+  display: flex;
+  align-items: flex-end;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+  isolation: isolate;
+  transition:
+    border-color 0.3s ease,
+    transform 0.4s var(--ease-out);
+}
+
+.program-card-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  transition:
+    transform 0.6s var(--ease-out),
+    filter 0.6s ease;
+  filter: grayscale(0.35) brightness(0.85);
+}
+
+.program-card-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 5%, rgba(0, 0, 0, 0.2) 60%, transparent);
+}
+
+.program-card-body {
+  width: 100%;
+  padding: 1.25rem;
+}
+
+.program-card-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.9rem;
+}
+
+.program-card-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2vw, 1.9rem);
+  font-weight: 600;
+  line-height: 1.05;
+}
+
+.program-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+.program-card-link svg {
+  transition: transform 0.3s var(--ease-out);
+}
+
+.program-card:hover {
+  border-color: rgba(212, 175, 55, 0.5);
+  transform: translateY(-6px);
+}
+
+.program-card:hover .program-card-img {
+  transform: scale(1.06);
+  filter: none;
+}
+
+.program-card:hover .program-card-link svg {
+  transform: translateX(4px);
+}
+
+/* Tablet: 3 tarjetas arriba y 2 más anchas (del mismo tamaño) abajo */
+@media (max-width: 1100px) {
+  .program-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .program-card {
+    grid-column: span 2;
+  }
+
+  .program-card:nth-child(n + 4) {
+    grid-column: span 3;
+    aspect-ratio: 16 / 11;
+  }
+
+  .program-card:nth-child(n + 4) .program-card-img {
+    object-position: center 25%;
+  }
+}
+
+/* En móvil, carrusel horizontal con snap */
+@media (max-width: 720px) {
+  .program-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    margin: 0 calc(-1 * var(--page-padding-x));
+    padding: 0.5rem var(--page-padding-x) 1rem;
+    scroll-padding: 0 var(--page-padding-x);
+    scrollbar-width: none;
+  }
+
+  .program-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .program-card,
+  .program-card:nth-child(n + 4) {
+    flex: 0 0 78%;
+    aspect-ratio: 3 / 4.3;
+    scroll-snap-align: start;
+  }
+}

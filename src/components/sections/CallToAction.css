@@ -1,0 +1,64 @@
+.cta-banner {
+  position: relative;
+  min-height: 460px;
+  display: flex;
+  align-items: center;
+  --media-radius: 32px;
+  border-radius: var(--media-radius);
+  clip-path: inset(0 round var(--media-radius));
+  border: var(--border-gold-soft);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.cta-image {
+  position: absolute;
+  inset: 0 0 0 auto;
+  width: 65%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 60% center;
+  z-index: -2;
+}
+
+.cta-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(to right, var(--color-surface) 35%, rgba(14, 14, 14, 0.7) 55%, rgba(14, 14, 14, 0.1)),
+    radial-gradient(circle at 0% 100%, rgba(212, 175, 55, 0.18), transparent 50%);
+}
+
+.cta-content {
+  max-width: 560px;
+  padding: clamp(2rem, 6vw, 4.5rem);
+}
+
+.cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 860px) {
+  .cta-banner {
+    align-items: flex-end;
+    min-height: 560px;
+  }
+
+  .cta-image {
+    width: 100%;
+  }
+
+  .cta-overlay {
+    background: linear-gradient(to top, var(--color-surface) 40%, rgba(14, 14, 14, 0.55) 70%, rgba(14, 14, 14, 0.15));
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-actions > * {
+    flex: 1 1 100%;
+  }
+}

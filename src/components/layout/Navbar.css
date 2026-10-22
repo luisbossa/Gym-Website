@@ -1,0 +1,249 @@
+.navbar {
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: var(--nav-height);
+  z-index: 200;
+  border-bottom: 1px solid transparent;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    backdrop-filter 0.3s ease;
+}
+
+.navbar.is-solid {
+  background: rgba(0, 0, 0, 0.78);
+  border-bottom-color: var(--color-border);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.navbar-inner {
+  width: 100%;
+  max-width: calc(var(--container) + 2 * var(--page-padding-x));
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 var(--page-padding-x);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.navbar-brand img {
+  width: 120px;
+  height: 45px;
+  object-fit: contain;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-link {
+  position: relative;
+  padding: 0.4rem 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-muted);
+  transition: color 0.25s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--gold-text-gradient);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s var(--ease-out);
+}
+
+.nav-link:hover,
+.nav-link.is-active {
+  color: var(--color-text);
+}
+
+.nav-link.is-active::after {
+  transform: scaleX(1);
+}
+
+.nav-menu-cta {
+  display: none;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.nav-login {
+  font-size: 0.95rem;
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.25s ease;
+}
+
+.nav-login:hover {
+  color: var(--color-gold-light);
+}
+
+.navbar-cta {
+  padding: 0.6rem 1.3rem;
+  font-size: 0.8rem;
+}
+
+.nav-menu-only {
+  display: none;
+}
+
+.nav-icon-btn {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: none;
+  cursor: pointer;
+  transition: border-color 0.25s ease;
+}
+
+.nav-icon-btn:hover {
+  border-color: var(--color-gold);
+}
+
+.nav-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 5px;
+  display: grid;
+  place-items: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #161616;
+  border-radius: 999px;
+  background: var(--gold-text-gradient);
+  animation: reveal-up 0.3s var(--ease-out);
+}
+
+.nav-account {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.nav-avatar {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #161616;
+  border-radius: 50%;
+  background: var(--gold-text-gradient);
+}
+
+.nav-account:hover .nav-account-name {
+  color: var(--color-gold-light);
+}
+
+.menu-toggle {
+  display: none;
+  padding: 0.35rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-login,
+  .nav-account-name {
+    display: none;
+  }
+
+  .nav-menu-only {
+    display: block;
+    text-align: left;
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--color-border);
+    cursor: pointer;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    height: calc(100dvh - var(--nav-height));
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.25rem;
+    padding: 2rem var(--page-padding-x);
+    background: var(--color-bg);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-12px);
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s var(--ease-out),
+      visibility 0.3s;
+  }
+
+  .nav-links.is-open {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+
+  .nav-link {
+    width: 100%;
+    padding: 0.85rem 0;
+    font-family: var(--font-display);
+    font-size: 2rem;
+    color: var(--color-text);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .nav-link::after {
+    display: none;
+  }
+
+  .nav-link.is-active {
+    color: var(--color-gold);
+  }
+
+  .nav-menu-cta {
+    display: inline-flex;
+    width: 100%;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .navbar-cta {
+    display: none;
+  }
+}

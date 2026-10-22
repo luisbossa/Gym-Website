@@ -1,0 +1,281 @@
+.account-page {
+  padding-top: calc(var(--nav-height) + 2.5rem);
+}
+
+.account-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  animation: reveal-up 0.6s var(--ease-out) both;
+}
+
+.account-header .eyebrow {
+  margin-bottom: 0.3rem;
+}
+
+.account-avatar {
+  display: grid;
+  place-items: center;
+  width: 84px;
+  height: 84px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #161616;
+  border-radius: 50%;
+  background: var(--gold-text-gradient);
+  box-shadow: 0 12px 36px rgba(212, 175, 55, 0.25);
+}
+
+.account-name {
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 600;
+}
+
+.account-muted {
+  font-size: 0.88rem;
+  color: var(--color-muted);
+}
+
+.account-logout {
+  margin-left: auto;
+}
+
+.account-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: 1.25rem;
+  align-items: start;
+  animation: reveal-up 0.7s var(--ease-out) 0.1s both;
+}
+
+.account-wide {
+  grid-column: 1 / -1;
+}
+
+.account-card {
+  padding: clamp(1.4rem, 3vw, 2rem);
+}
+
+.account-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.account-card-title {
+  margin-bottom: 1.25rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+.account-card-head .account-card-title {
+  margin-bottom: 0;
+}
+
+.account-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  color: var(--color-muted);
+}
+
+/* ---------- Membresía ---------- */
+
+.membership-card {
+  background: var(--gold-glow), var(--color-surface-2);
+  border-color: rgba(212, 175, 55, 0.4);
+}
+
+.membership-plan {
+  margin-top: 1rem;
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  line-height: 1.1;
+}
+
+.membership-price {
+  color: var(--color-gold-light);
+}
+
+.account-details {
+  margin: 1.5rem 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.account-details div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.92rem;
+}
+
+.account-details dt {
+  color: var(--color-muted);
+}
+
+.account-details dd {
+  font-weight: 600;
+  text-align: right;
+}
+
+.account-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.account-confirm {
+  padding: 1rem 1.1rem;
+  border-radius: 12px;
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  font-size: 0.9rem;
+}
+
+.account-confirm div {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.9rem;
+}
+
+.outline-btn.is-danger {
+  border-color: rgba(239, 68, 68, 0.7);
+}
+
+.outline-btn.is-danger:hover {
+  color: #fff;
+  background: rgba(239, 68, 68, 0.2);
+}
+
+/* ---------- Perfil ---------- */
+
+.account-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.1rem;
+}
+
+.account-form .field {
+  width: 100%;
+}
+
+.account-form input:disabled {
+  color: var(--color-muted);
+  cursor: not-allowed;
+}
+
+/* ---------- Programas ---------- */
+
+.account-programs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 0.75rem;
+}
+
+.account-program {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  transition: border-color 0.25s ease;
+}
+
+.account-program:hover {
+  border-color: rgba(212, 175, 55, 0.45);
+}
+
+.account-program img {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.account-program-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.account-program-title {
+  font-weight: 700;
+}
+
+.account-program .routine-progress {
+  margin: 0.5rem 0 0;
+}
+
+.account-program > svg {
+  color: var(--color-muted);
+}
+
+/* ---------- Pedidos ---------- */
+
+.account-orders {
+  display: flex;
+  flex-direction: column;
+}
+
+.account-order {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.account-order:first-child {
+  padding-top: 0;
+}
+
+.account-order-id {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  font-weight: 700;
+}
+
+.account-order strong {
+  flex-shrink: 0;
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+}
+
+@media (max-width: 860px) {
+  .account-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .account-logout {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .account-programs {
+    grid-template-columns: 1fr;
+  }
+
+  .account-order {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

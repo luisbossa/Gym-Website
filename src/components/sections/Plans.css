@@ -1,0 +1,125 @@
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: stretch;
+  gap: 1.25rem;
+}
+
+.plan-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.6rem 1.75rem;
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s var(--ease-out);
+}
+
+.plan-card:hover {
+  border-color: rgba(212, 175, 55, 0.4);
+  transform: translateY(-4px);
+}
+
+.plan-card.is-featured {
+  background: var(--gold-glow), var(--color-surface-2);
+  border-color: var(--color-gold);
+  box-shadow: 0 24px 60px rgba(212, 175, 55, 0.12);
+}
+
+.plan-badge {
+  position: absolute;
+  top: -0.8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.3rem 0.9rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: #161616;
+  background: var(--gold-text-gradient);
+  border-radius: 999px;
+}
+
+.plan-header {
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.plan-name {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+.plan-price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.15rem;
+  margin-top: 0.75rem;
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 3.5vw, 3.2rem);
+  line-height: 1;
+}
+
+.plan-currency {
+  font-size: 0.55em;
+  align-self: flex-start;
+  margin-top: 0.2em;
+}
+
+.plan-period {
+  margin-left: 0.25rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+.plan-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+.plan-benefit {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.plan-check {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  margin-top: 1px;
+  border-radius: 50%;
+  color: var(--color-gold);
+  background: rgba(212, 175, 55, 0.12);
+}
+
+.plan-cta {
+  width: 100%;
+  margin-top: auto;
+}
+
+@media (max-width: 1100px) {
+  .plans-grid {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2rem;
+  }
+}
+
+@media (max-width: 620px) {
+  .plans-grid {
+    grid-template-columns: 1fr;
+  }
+}
